@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reminders CL by Cloud Lab</title>
+  <meta name="description" content="Reminders CL is a mobile reminder and event organization app by Cloud Lab. View our Privacy Policy.">
+  <link rel="canonical" href="https://reminders.cloudlab.name/">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/" aria-label="Reminders CL home">Reminders CL</a>
+      <span class="byline">by Cloud Lab</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Reminders CL</h1>
+      <p>Keep track of anniversaries, medical checkups, and shared events with the people who matter.</p>
+      <a class="cta" href="/privacy-policy">Read the Privacy Policy</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Cloud Lab. All rights reserved.</p>
+      <p><a href="/privacy-policy">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
