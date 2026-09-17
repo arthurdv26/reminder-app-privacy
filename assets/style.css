@@ -196,6 +196,20 @@ a:focus {
   margin: 0.25rem 0;
 }
 
+.notice {
+  background-color: #fef3c7;
+  border: 1px solid #f59e0b;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.notice code {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+}
+
 @media (min-width: 768px) {
   .hero h1 {
     font-size: 3rem;

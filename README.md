@@ -9,6 +9,8 @@ A simple, production-ready static website for the Reminders CL mobile app by Clo
 ├── index.html                # Landing page for Reminders CL
 ├── privacy-policy/
 │   └── index.html            # Privacy Policy page
+├── delete-account/
+│   └── index.html            # Google Play Delete Account URL page
 ├── assets/
 │   └── style.css             # Shared stylesheet
 ├── _headers                  # Cloudflare Pages security headers
@@ -37,7 +39,7 @@ This is a no-build, no-backend static site designed for Cloudflare Pages. It con
 
 ## Deployment to Vercel
 
-If you deploy this repo to Vercel, `vercel.json` at the project root rewrites `/privacy-policy` to `privacy-policy/index.html`. No extra build settings are required.
+If you deploy this repo to Vercel, `vercel.json` at the project root rewrites `/privacy-policy` to `privacy-policy/index.html` and `/delete-account` to `delete-account/index.html`. No extra build settings are required.
 
 ## Custom domain: `reminders.cloudlab.name`
 
@@ -57,20 +59,27 @@ If you deploy this repo to Vercel, `vercel.json` at the project root rewrites `/
 
 ## Replace the contact email placeholder
 
-Before production deployment, replace `[PRIVACY_CONTACT_EMAIL]` with the real support/privacy email address in this file:
+Before production deployment, replace `[PRIVACY_CONTACT_EMAIL]` with the real support/privacy email address in these files:
 
 ```text
 privacy-policy/index.html
+delete-account/index.html
 ```
 
-Search the file for `[PRIVACY_CONTACT_EMAIL]` and update both the `href` value and the link text.
+Search each file for `[PRIVACY_CONTACT_EMAIL]` and update both the `href` value and the link text. **This placeholder must be replaced before submitting the URL to Google Play.**
 
-## Final Google Play Privacy Policy URL
+## Final Google Play URLs
 
-Enter this URL into the Google Play Console as the Privacy Policy URL:
+Enter this URL into the Google Play Console as the **Privacy Policy URL**:
 
 ```text
 https://reminders.cloudlab.name/privacy-policy
+```
+
+Enter this URL into the Google Play Console as the **Delete Account URL**:
+
+```text
+https://reminders.cloudlab.name/delete-account
 ```
 
 ## Notes
