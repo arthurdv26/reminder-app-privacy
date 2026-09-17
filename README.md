@@ -5,13 +5,14 @@ A simple, production-ready static website for the Reminders CL mobile app by Clo
 ## Project structure
 
 ```text
-reminders-privacy/
+./
 ├── index.html                # Landing page for Reminders CL
 ├── privacy-policy/
 │   └── index.html            # Privacy Policy page
 ├── assets/
 │   └── style.css             # Shared stylesheet
 ├── _headers                  # Cloudflare Pages security headers
+├── vercel.json               # Vercel rewrite for /privacy-policy
 └── README.md                 # This file
 ```
 
@@ -29,10 +30,14 @@ This is a no-build, no-backend static site designed for Cloudflare Pages. It con
 1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/).
 2. Go to **Pages** → **Create a project**.
 3. Choose your upload method:
-   - **Direct upload**: zip the `reminders-privacy/` folder and upload it.
-   - **Git integration**: connect the repository and set the build output directory to `reminders-privacy/` (no build command is needed).
+   - **Direct upload**: zip the project root and upload it.
+   - **Git integration**: connect the repository and set the build output directory to the project root (no build command is needed).
 4. Cloudflare Pages will serve the static files directly.
 5. Verify the deployment by visiting `https://<your-pages-subdomain>.pages.dev/privacy-policy/`.
+
+## Deployment to Vercel
+
+If you deploy this repo to Vercel, `vercel.json` at the project root rewrites `/privacy-policy` to `privacy-policy/index.html`. No extra build settings are required.
 
 ## Custom domain: `reminders.cloudlab.name`
 
@@ -55,7 +60,7 @@ This is a no-build, no-backend static site designed for Cloudflare Pages. It con
 Before production deployment, replace `[PRIVACY_CONTACT_EMAIL]` with the real support/privacy email address in this file:
 
 ```text
-reminders-privacy/privacy-policy/index.html
+privacy-policy/index.html
 ```
 
 Search the file for `[PRIVACY_CONTACT_EMAIL]` and update both the `href` value and the link text.

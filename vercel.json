@@ -1,8 +1,6 @@
 {
   "rewrites": [
-    { "source": "/privacy-policy", "destination": "/reminders-privacy/privacy-policy/index.html" },
-    { "source": "/privacy-policy/", "destination": "/reminders-privacy/privacy-policy/index.html" },
-    { "source": "/assets/style.css", "destination": "/reminders-privacy/assets/style.css" },
-    { "source": "/", "destination": "/reminders-privacy/index.html" }
+    { "source": "/privacy-policy", "destination": "/privacy-policy/index.html" },
+    { "source": "/privacy-policy/", "destination": "/privacy-policy/index.html" }
   ]
 }
